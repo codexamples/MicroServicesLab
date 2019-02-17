@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: academy
+  labels:
+    app: academy
+spec:
+  ports:
+  - port: 80
+    nodePort: 30000
+    protocol: TCP
+  selector:
+    app: academy
+  type: NodePort
+
