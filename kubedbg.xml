@@ -2,6 +2,6 @@
     PipePath="powershell" TargetArchitecture="x64" MIMode="clrdbg"
     PipeArguments="
       -ExecutionPolicy Bypass
-      -File kubedbg.ps1">
+      -File <kubedbg.ps1-full-path>">
   <LaunchCompleteCommand>None</LaunchCompleteCommand>
 </PipeLaunchOptions>
