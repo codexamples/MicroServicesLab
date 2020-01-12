@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.2-sdk AS build-env
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
 WORKDIR /app
 
 # -------------- Step 1. Copy only required files better caching
@@ -32,6 +32,6 @@ RUN dotnet vstest Tests/*/bin/Debug/*/*Tests.dll
 #-------------- Step 5. Build runtime image
 RUN dotnet publish Service.App -c Debug -o /app/out --no-restore
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 COPY --from=build-env /app/out .
 ENTRYPOINT ["dotnet", "Service.App.dll"]
