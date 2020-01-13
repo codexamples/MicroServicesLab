@@ -16,13 +16,13 @@ spec:
     spec:
       containers:
       - name: academy
-        image: <image-name>
+        image: localhost:5000/academy-image
         imagePullPolicy: Never
         ports:
         - containerPort: 80
-      readinessProbe:
-        httpGet:
-          path: /health/ready
-          port: 80
+        readinessProbe:
+          httpGet:
+            path: /health/ready
+            port: 80
           initialDelaySeconds: 5
           periodSeconds: 5
