@@ -15,7 +15,7 @@ namespace Service.App
     {
         public Task<HealthCheckResult> CheckHealthAsync(HealthCheckContext context, CancellationToken cancellationToken = default)
         {
-            return Task.FromResult(HealthCheckResult.Unhealthy("SQL doesn't connect"));
+            return Task.FromResult(HealthCheckResult.Healthy("SQL Ready"));
         }
     }
 }

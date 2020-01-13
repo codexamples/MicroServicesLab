@@ -11,9 +11,9 @@ namespace Service.Controllers
     public class AcademyController : ControllerBase
     {
         [HttpGet("greeting")]
-        public ActionResult<string> GetGreatingAsync()
+        public IActionResult GetGreating()
         {
-            return "HI";
+            return Ok("HI");
 		}
     }
 }
