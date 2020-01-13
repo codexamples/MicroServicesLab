@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: academy
-        image: localhost:5000/academy-image
+        image: <image-name>
         imagePullPolicy: Never
         ports:
         - containerPort: 80
