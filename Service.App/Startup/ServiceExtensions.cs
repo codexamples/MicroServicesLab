@@ -16,6 +16,9 @@ namespace Service.App.Startup
 
         public static void AddAppServices(this IServiceCollection services)
         {
+            services
+                .AddHealthChecks()
+                .AddCheck<AcademyHealthChecks>("example_health_check");
         }
     }
 }
