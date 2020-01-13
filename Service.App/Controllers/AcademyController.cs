@@ -11,10 +11,9 @@ namespace Service.Controllers
     public class AcademyController : ControllerBase
     {
         [HttpGet("greeting")]
-        public ActionResult<string> GetReadinessAsync()
+        public ActionResult<string> GetGreatingAsync()
         {
-            var greeting = "Hi";
-			return greeting;
+            return "HI";
 		}
     }
 }
