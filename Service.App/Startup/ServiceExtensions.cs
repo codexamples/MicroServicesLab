@@ -9,11 +9,6 @@ namespace Service.App.Startup
 
     public static class ServiceExtensions
     {
-        public static void AddConfigurations(this IServiceCollection services, IConfiguration configuration)
-        {
-            services.AddOptions();
-        }
-
         public static void AddAppServices(this IServiceCollection services)
         {
             services
